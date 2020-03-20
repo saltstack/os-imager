@@ -2,12 +2,16 @@
   "_comment": "Build with `packer build -var-file=arch-lts-us-west-2.json arch.json`",
   "ssh_username": "arch",
   "aws_region": "us-west-2",
+  "os_name": "Arch",
+  "os_version": "lts",
+  "bootstrap_args": "-qXU",
+  "bootstrap_version": "2018.3.4",
+  "salt_branch": "master",
+  "state_name": "git.minimal",
   "ami_filter": "arch-linux-lts-hvm-*.x86_64-ebs",
   "ami_owner": "093273469852",
   "ami_name_prefix": "saltstack",
   "ami_name_suffix": "arch/lts",
   "instance_type": "m5.large",
-  "build_type": "base",
-  "os_name": "Arch",
-  "os_version": "lts"
+  "build_type": "ci"
 }

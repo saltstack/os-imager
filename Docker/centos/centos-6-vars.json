@@ -3,8 +3,12 @@
   "docker_image": "centos:6",
   "docker_repository": "saltstack",
   "docker_image_prefix": "ci",
-  "build_type": "base",
+  "build_type": "ci",
   "os_name": "CentOS",
   "os_version": "6",
-  "run_command": "/sbin/init"
+  "run_command": "/sbin/init",
+  "bootstrap_args": "-qXU -P -y -x python2.7",
+  "bootstrap_version": "2018.3.4",
+  "salt_branch": "master",
+  "state_name": "git.minimal"
 }
